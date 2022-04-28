@@ -18,10 +18,9 @@
   </div>
   <div>
     <ul>
-      <li style="font-size:20pt"><input type="checkbox" name="">Some text</li>
-      <li style="border:1px solid"><input type="checkbox" name="">Some text</li>
-      <li style="background-color: aqua;"><input type="checkbox" name="">Some text</li>
-      <li style="font-style: italic;"><input type="checkbox" name="">Some text</li>
+      {% for todo in todos %}
+      <li style="font-size:20pt; font-style: italic; background-color: aqua; border:1px solid"><input type="checkbox" name="">{{todo.text}}</li>
+      {% endfor}
     </ul>
 
   </div>
