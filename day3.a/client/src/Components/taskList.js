@@ -10,12 +10,12 @@ class TaskList extends React.Component {
     console.log("inside delete");
   };
   onSubmitClick = () => {
-    axios.post('http://localhost:3000/addTask',{
+    axios.post("http://localhost:3000/addTask", {
       task: this.state.task,
-    })
+    });
   };
   render() {
-    console.log(this.state.task);
+    // console.log(this.state.task);
     return (
       <div>
         <div>taskList</div>
@@ -27,9 +27,13 @@ class TaskList extends React.Component {
           />
         </div>
 
-        <button className="ui primary button basic">
-          <i className="right arrow icon"></i> Submit
+        <button
+          className="ui primary button basic"
+          onClick={() => this.onSubmitClick()}
+        >
+          Submit
         </button>
+
         <hr />
 
         <div className="ui cards">
